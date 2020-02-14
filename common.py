@@ -84,6 +84,22 @@ def argument_parser(mode='train'):
         '--ner_model_dir', default='ner-model',
         help='Trained NER model directory'
     )
+    argparser.add_argument(
+        '-v', '--verbose', default=0, action="count",
+        help='Verbose level'
+    )
+    argparser.add_argument(
+        '--profile', action="store_true",
+    )
+    argparser.add_argument(
+        '--num_samples', type=int, default=0,
+        help='Number of samples'
+    )
+    argparser.add_argument(
+        '--no_warmup', action="store_true",
+        help='Disable warmup'
+    )
+
     return argparser
 
 

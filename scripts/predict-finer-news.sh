@@ -16,4 +16,5 @@ output_file="$SCRIPTDIR/../finer-news-predictions.tsv"
 python "$SCRIPTDIR/../predict.py" \
     --ner_model_dir "$ner_model_dir" \
     --test_data "$test_data" \
-    --output_file "$output_file"
+    --output_file "$output_file" \
+    $*
